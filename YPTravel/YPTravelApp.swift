@@ -1,10 +1,3 @@
-//
-//  YPTravelApp.swift
-//  YPTravel
-//
-//  Created by Georgiy Neguritsa on 14/3/24.
-//
-
 import SwiftUI
 
 @main

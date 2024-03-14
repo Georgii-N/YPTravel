@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  YPTravel
-//
-//  Created by Georgiy Neguritsa on 14/3/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -16,9 +9,15 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            stations()
+        }
     }
 }
 
 #Preview {
     ContentView()
 }
+
+
+
