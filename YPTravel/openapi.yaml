@@ -6,8 +6,9 @@ info:
 servers:
 - url: https://api.rasp.yandex.net
 tags:
-- name: Список ближайших станций
-  description: Список ближайших станций
+- name: YPTravel
+  description: YPTravel
+  
 paths:
   /v3.0/nearest_stations/:
     get:
@@ -59,6 +60,37 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Stations'
+  
+  /v3.0/search/:
+    get:
+      tags:
+      - getTripsSchedule
+      summary: Расписание рейсов между станциями
+      operationId: getTripsSchedule
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: from
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: to
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TripsSchedule'
 components:
   schemas:
     Stations:
@@ -70,6 +102,22 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Station'
+    TripsSchedule:
+      type: object
+      properties:
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        search:
+          $ref: '#/components/schemas/Search'
+        segments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Segment'
+        interval_segments:
+          type: array
+          items:
+            $ref: '#/components/schemas/IntervalSegments'
+            
     Pagination:
       type: object
       properties:
@@ -79,6 +127,7 @@ components:
           type: integer
         offset:
           type: integer
+          
     Station:
       type: object
       properties:
@@ -108,6 +157,7 @@ components:
           type: integer
         type_choices:
           $ref: '#/components/schemas/Schedule'
+          
     Schedule:
       type: object
       properties:
@@ -115,3 +165,240 @@ components:
           type: string
         touch_url:
           type: string
+          
+    Search:
+      type: object
+      properties:
+        from:
+          $ref: '#/components/schemas/From'
+        to:
+          $ref: '#/components/schemas/To'
+        date:
+          type: string
+          
+    IntervalSegments:
+      type: object
+      properties:
+        from:
+          $ref: '#/components/schemas/SegmentFrom'
+        thread:
+          $ref: '#/components/schemas/Thread'
+        departure_platform:
+          type: string
+        stops:
+          type: string
+        departure_terminal:
+          type: string
+        to:
+          $ref: '#/components/schemas/SegmentTo'
+        has_transfers:
+          type: boolean
+        tickets_info:
+          $ref: '#/components/schemas/TicketsInfo'
+        duration:
+          type: integer
+        arrival_terminal:
+          type: string
+        start_date:
+          type: string
+        arrival_platform:
+          type: string
+          
+    Segment:
+      type: object
+      properties:
+        thread:
+          $ref: '#/components/schemas/Thread'
+        stops:
+          type: string
+        from:
+          $ref: '#/components/schemas/SegmentFrom'
+        to:
+          $ref: '#/components/schemas/SegmentTo'
+        departure_platform:
+          type: string
+        arrival_platform:
+          type: string
+        departure_terminal:
+          type: string
+        arrival_terminal:
+          type: string
+        duration:
+          type: integer
+        has_transfers:
+          type: boolean
+        tickets_info:
+          $ref: '#/components/schemas/TicketsInfo'
+        departure:
+          type: string
+        arrival:
+          type: string
+        start_date:
+          type: string
+          
+    Thread:
+      type: object
+      properties:
+        number:
+          type: string
+        title:
+          type: string
+        short_title:
+          type: string
+        express_type:
+          type: string
+        transport_type:
+          type: string
+        carrier:
+          $ref: '#/components/schemas/Carrier'
+        uid:
+          type: string
+        vehicle:
+          type: string
+        transport_subtype:
+          $ref: '#/components/schemas/TransportSubtype'
+        thread_method_link:
+          type: string
+          
+    Carrier:
+      type: object
+      properties:
+        code:
+          type: integer
+        contacts:
+          type: string
+        url:
+          type: string
+        logo_svg:
+          type: string
+        title:
+          type: string
+        phone:
+          type: string
+        codes:
+          $ref: '#/components/schemas/Codes'
+        adress:
+          type: string
+        logo:
+          type: string
+        email:
+          type: string
+    
+    Codes:
+      type: object
+      properties:
+        icao:
+          type: string
+        sirena:
+          type: string
+        iata:
+          type: string
+    
+    SegmentFrom:
+      type: object
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        short_title:
+          type: string
+        popular_title:
+          type: string
+        code:
+          type: string
+        station_type:
+          type: string
+        station_type_name:
+          type: string
+        transport_type:
+          type: string
+      
+    SegmentTo:
+      type: object
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        short_title:
+          type: string
+        popular_title:
+          type: string
+        code:
+          type: string
+        station_type:
+          type: string
+        station_type_name:
+          type: string
+        transport_type:
+          type: string
+          
+    TransportSubtype:
+      type: object
+      properties:
+        color:
+          type: string
+        code:
+          type: string
+        title:
+          type: string
+          
+    TicketsInfo:
+      type: object
+      properties:
+        et_marker:
+          type: boolean
+        places:
+          type: array
+          items:
+            $ref: '#/components/schemas/Place'
+    
+    Place:
+      type: object
+      properties:
+        currency:
+          type: string
+          description: Идентификатор валюты, в которой указана цена
+        price:
+          $ref: '#/components/schemas/Price'
+        name:
+          type: string
+    
+    Price:
+      type: object
+      description: Цена билета
+      properties:
+        whole:
+          type: integer
+        cents:
+          type: integer
+          
+    From:
+      type: object
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        short_title:
+          type: string
+        popular_title:
+          type: string
+        code:
+          type: string
+          
+    To:
+      type: object
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        short_title:
+          type: string
+        popular_title:
+          type: string
+        code:
+          type: string
+          
