@@ -6,6 +6,7 @@ import OpenAPIURLSession
 typealias NearestStations = Components.Schemas.Stations
 typealias TripsSchedule = Components.Schemas.TripsSchedule
 typealias TripsByStation = Components.Schemas.TripsByStation
+typealias ListOfStations = Components.Schemas.ListOfStations
 
 protocol NearestStationsServiceProtocol {
     func getNearestStations(lat: Double, lng: Double, distance: Int) async throws -> NearestStations
@@ -45,10 +46,19 @@ final class NearestStationsService: NearestStationsServiceProtocol {
     }
     
     func getTripsByStation(station: String) async throws -> TripsByStation {
-        print("getTripsByStation")
         let response = try await client.getTripsByStation(
             query: .init(
                 apikey: apikey, station: station
+            )
+        )
+        
+        return try response.ok.body.json
+    }
+    
+    func getListOfStations(uid: String) async throws -> ListOfStations {
+        let response = try await client.getListOfStations(
+            query: .init(
+                apikey: apikey, uid: uid
             )
         )
         
@@ -87,7 +97,7 @@ func schedule() {
     Task {
         let schedule = try await service.getTripsSchedule("c146", "c213")
 
-        print(tripsByStation)
+        print(schedule)
     }
 }
 
@@ -103,7 +113,24 @@ func tripsByStation() {
     )
     
     Task {
-        let tripsByStation = try await service.getTripsByStation(station: "s9616628")
+        let tripsByStation = try await service.getTripsByStation(station: "s2000003")
+        print(tripsByStation)
+    }
+}
+
+func getListOfStations() {
+    let client = Client(
+        serverURL: try! Servers.server1(),
+        transport: URLSessionTransport()
+    )
+    
+    let service = NearestStationsService(
+        client: client,
+        apikey: "d52e2ffc-ec87-4d27-8247-5c7f412d514e"
+    )
+    
+    Task {
+        let tripsByStation = try await service.getListOfStations(uid: "126YE_10_2")
         print(tripsByStation)
     }
 }

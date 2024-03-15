@@ -117,6 +117,32 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TripsByStation'
+  
+  /v3.0/thread/:
+    get:
+      tags:
+      - getListOfStations
+      summary: Список станций следования
+      operationId: getListOfStations
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: uid
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListOfStations'
     
 components:
   schemas:
@@ -163,6 +189,46 @@ components:
           $ref: '#/components/schemas/ScheduleDirection'
         directions:
           $ref: '#/components/schemas/Directions'
+          
+    ListOfStations:
+      type: object
+      properties:
+        number:
+          type: string
+        title:
+          type: string
+        short_title:
+          type: string
+        express_type:
+          type: string
+        transport_type:
+          type: string
+        carrier:
+          $ref: '#/components/schemas/Carrier'
+        uid:
+          type: string
+        vehicle:
+          type: string
+        transport_subtype:
+          $ref: '#/components/schemas/TransportSubtype'
+        except_days:
+          type: string
+        stops:
+          type: array
+          items:
+            $ref: '#/components/schemas/Stop'
+        from:
+          type: string
+        to:
+          type: string
+        start_date:
+          type: string
+        arrival_date:
+          type: string
+        departure_date:
+          type: string
+        start_time:
+          type: string
             
     Pagination:
       type: object
@@ -187,6 +253,8 @@ components:
           type: string
         code:
           type: string
+        codes:
+          $ref: '#/components/schemas/StationCodes'
         lat:
           type: number
         lng:
@@ -203,6 +271,24 @@ components:
           type: integer
         type_choices:
           $ref: '#/components/schemas/TypeChoises'
+          
+    Stop:
+      type: object
+      properties:
+        arrival:
+          type: string
+        departure:
+          type: string
+        duration:
+          type: integer
+        stop_time:
+          type: integer
+        station:
+          $ref: '#/components/schemas/Station'
+        terminal:
+          type: string
+        platform:
+          type: string
           
     TypeChoises:
       type: object
@@ -368,6 +454,16 @@ components:
         logo:
           type: string
         email:
+          type: string
+    
+    StationCodes:
+      type: object
+      properties:
+        express:
+          type: string
+        yandex:
+          type: string
+        esr:
           type: string
     
     Codes:
