@@ -91,6 +91,33 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TripsSchedule'
+                
+  /v3.0/schedule/:
+    get:
+      tags:
+      - getTripsByStation
+      summary: Расписание рейсов по станции
+      operationId: getTripsByStation
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: station
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TripsByStation'
+    
 components:
   schemas:
     Stations:
@@ -102,6 +129,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Station'
+            
     TripsSchedule:
       type: object
       properties:
@@ -117,6 +145,24 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/IntervalSegments'
+            
+    TripsByStation:
+      type: object
+      properties:
+        date:
+          type: string
+        station:
+          $ref: '#/components/schemas/Station'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        schedule:
+          type: array
+          items:
+            $ref: '#/components/schemas/Schedule'
+        schedule_direction:
+          $ref: '#/components/schemas/ScheduleDirection'
+        directions:
+          $ref: '#/components/schemas/Directions'
             
     Pagination:
       type: object
@@ -156,14 +202,54 @@ components:
         majority:
           type: integer
         type_choices:
-          $ref: '#/components/schemas/Schedule'
+          $ref: '#/components/schemas/TypeChoises'
           
-    Schedule:
+    TypeChoises:
       type: object
       properties:
         desktop_url:
           type: string
         touch_url:
+          type: string
+          
+    Schedule:
+      type: object
+      properties:
+        except_days:
+          type: string
+        arrival:
+          type: string
+        thread:
+          $ref: '#/components/schemas/Thread'
+        is_fuzzy:
+          type: boolean
+        days:
+          type: string
+        stops:
+          type: string
+        direction:
+          type: string
+        departure:
+          type: string
+        terminal:
+          type: string
+        platform:
+          type: string
+          
+    ScheduleDirection:
+      type: object
+      properties:
+        code:
+          type: string
+        title:
+          type: string
+          
+    Directions:
+      type: object
+      properties:
+        code:
+          type: string
+        title:
           type: string
           
     Search:
@@ -402,3 +488,4 @@ components:
         code:
           type: string
           
+    
