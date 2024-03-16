@@ -11,7 +11,11 @@
 		408556792BA3201500F1B959 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 408556782BA3201500F1B959 /* OpenAPIURLSession */; };
 		4085567D2BA3205000F1B959 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */; };
 		4085567F2BA3205900F1B959 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 4085567E2BA3205900F1B959 /* openapi.yaml */; };
-		408556822BA3208000F1B959 /* NearestStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408556812BA3208000F1B959 /* NearestStationsService.swift */; };
+		409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2E52BA588BE00A0D288 /* NetworkClient.swift */; };
+		409EB2E92BA588CC00A0D288 /* NetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2E82BA588CC00A0D288 /* NetworkClientProtocol.swift */; };
+		409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2EB2BA589D900A0D288 /* Resources.swift */; };
+		409EB2F62BA5924600A0D288 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2F52BA5924600A0D288 /* CustomButton.swift */; };
+		409EB2F92BA5927600A0D288 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2F82BA5927600A0D288 /* UIConstants.swift */; };
 		409FDE022BA2ECF3007BD877 /* YPTravelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409FDE012BA2ECF3007BD877 /* YPTravelApp.swift */; };
 		409FDE042BA2ECF3007BD877 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409FDE032BA2ECF3007BD877 /* ContentView.swift */; };
 		409FDE062BA2ECF5007BD877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409FDE052BA2ECF5007BD877 /* Assets.xcassets */; };
@@ -21,7 +25,11 @@
 /* Begin PBXFileReference section */
 		4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		4085567E2BA3205900F1B959 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
-		408556812BA3208000F1B959 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
+		409EB2E52BA588BE00A0D288 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		409EB2E82BA588CC00A0D288 /* NetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientProtocol.swift; sourceTree = "<group>"; };
+		409EB2EB2BA589D900A0D288 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		409EB2F52BA5924600A0D288 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		409EB2F82BA5927600A0D288 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		409FDDFE2BA2ECF3007BD877 /* YPTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YPTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409FDE012BA2ECF3007BD877 /* YPTravelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPTravelApp.swift; sourceTree = "<group>"; };
 		409FDE032BA2ECF3007BD877 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +50,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		409EB2EA2BA5894E00A0D288 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				409EB2F12BA5915400A0D288 /* OpenAPI */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		409EB2EE2BA5913C00A0D288 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				409EB2F02BA5914700A0D288 /* NetworkClient */,
+				409EB2E52BA588BE00A0D288 /* NetworkClient.swift */,
+				409EB2E82BA588CC00A0D288 /* NetworkClientProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		409EB2F02BA5914700A0D288 /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		409EB2F12BA5915400A0D288 /* OpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4085567E2BA3205900F1B959 /* openapi.yaml */,
+				4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */,
+			);
+			path = OpenAPI;
+			sourceTree = "<group>";
+		};
+		409EB2F32BA5921B00A0D288 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				409EB2F42BA5923100A0D288 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		409EB2F42BA5923100A0D288 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				409EB2F52BA5924600A0D288 /* CustomButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		409EB2FA2BA592E400A0D288 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				409EB2EB2BA589D900A0D288 /* Resources.swift */,
+				409EB2F82BA5927600A0D288 /* UIConstants.swift */,
+				409FDE052BA2ECF5007BD877 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		409FDDF52BA2ECF3007BD877 = {
 			isa = PBXGroup;
 			children = (
@@ -63,10 +131,10 @@
 			children = (
 				409FDE012BA2ECF3007BD877 /* YPTravelApp.swift */,
 				409FDE032BA2ECF3007BD877 /* ContentView.swift */,
-				408556812BA3208000F1B959 /* NearestStationsService.swift */,
-				4085567E2BA3205900F1B959 /* openapi.yaml */,
-				4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */,
-				409FDE052BA2ECF5007BD877 /* Assets.xcassets */,
+				409EB2F32BA5921B00A0D288 /* UI */,
+				409EB2EE2BA5913C00A0D288 /* Services */,
+				409EB2FA2BA592E400A0D288 /* SupportingFiles */,
+				409EB2EA2BA5894E00A0D288 /* Generated */,
 				409FDE072BA2ECF5007BD877 /* Preview Content */,
 			);
 			path = YPTravel;
@@ -163,8 +231,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				409FDE042BA2ECF3007BD877 /* ContentView.swift in Sources */,
-				408556822BA3208000F1B959 /* NearestStationsService.swift in Sources */,
 				409FDE022BA2ECF3007BD877 /* YPTravelApp.swift in Sources */,
+				409EB2F62BA5924600A0D288 /* CustomButton.swift in Sources */,
+				409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */,
+				409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */,
+				409EB2E92BA588CC00A0D288 /* NetworkClientProtocol.swift in Sources */,
+				409EB2F92BA5927600A0D288 /* UIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
