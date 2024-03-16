@@ -1,12 +1,17 @@
 // 1. Импортируем библиотеки
 import OpenAPIRuntime
 import OpenAPIURLSession
+import SwiftUI
 
 // 2. Улучшаем читаемость кода — необязательный шаг
 typealias NearestStations = Components.Schemas.Stations
 typealias TripsSchedule = Components.Schemas.TripsSchedule
 typealias TripsByStation = Components.Schemas.TripsByStation
 typealias ListOfStations = Components.Schemas.ListOfStations
+typealias NearestSettlement = Components.Schemas.NearestSettlement
+typealias CarrierInformation = Components.Schemas.Carriers
+typealias AllStationsList = Components.Schemas.AllStationsList
+typealias Сopyright = Components.Schemas.Copyrights
 
 protocol NearestStationsServiceProtocol {
     func getNearestStations(lat: Double, lng: Double, distance: Int) async throws -> NearestStations
@@ -59,6 +64,42 @@ final class NearestStationsService: NearestStationsServiceProtocol {
         let response = try await client.getListOfStations(
             query: .init(
                 apikey: apikey, uid: uid
+            )
+        )
+        
+        return try response.ok.body.json
+    }
+    
+    func getNearestSettlement() async throws -> NearestSettlement {
+        let response = try await client.getNearestSettlement(
+            query: .init(apikey: apikey, lat: 59.864177, lng: 30.319163, distance: 50
+            )
+        )
+        
+        return try response.ok.body.json
+    }
+    
+    func getCarrierInformation() async throws -> CarrierInformation {
+        let response = try await client.getCarrierInformation(
+            query: .init(apikey: apikey, code: "TK", system: "iata"
+            )
+        )
+        
+        return try response.ok.body.json
+    }
+    
+    func getAllStationsList() async throws -> HTTPBody {
+        let response = try await client.getAllStationsList(
+            query: .init(apikey: apikey
+            )
+        )
+        
+        return try response.ok.body.html
+    }
+    
+    func getCopyright() async throws -> Сopyright {
+        let response = try await client.getCopyright(
+            query: .init(apikey: apikey
             )
         )
         
@@ -135,4 +176,79 @@ func getListOfStations() {
     }
 }
 
+func getNearestSettlement() {
+    let client = Client(
+        serverURL: try! Servers.server1(),
+        transport: URLSessionTransport()
+    )
+    
+    let service = NearestStationsService(
+        client: client,
+        apikey: "d52e2ffc-ec87-4d27-8247-5c7f412d514e"
+    )
+    
+    Task {
+        let nearestSettlement = try await service.getNearestSettlement()
+        print(nearestSettlement)
+    }
+}
 
+func getCarrierInformation() {
+    let client = Client(
+        serverURL: try! Servers.server1(),
+        transport: URLSessionTransport()
+    )
+    
+    let service = NearestStationsService(
+        client: client,
+        apikey: "d52e2ffc-ec87-4d27-8247-5c7f412d514e"
+    )
+    
+    Task {
+        let carrierInformation = try await service.getCarrierInformation()
+        print(carrierInformation)
+    }
+}
+
+func getAllStationsList() {
+    let client = Client(
+        serverURL: try! Servers.server1(),
+        transport: URLSessionTransport()
+    )
+    
+    let service = NearestStationsService(
+        client: client,
+        apikey: "d52e2ffc-ec87-4d27-8247-5c7f412d514e"
+    )
+    
+    Task {
+        do {
+            let response = try await service.getAllStationsList()
+            let data = try await Data(collecting: response,
+                                      upTo: 50 * 1024 * 1024)
+
+            let allStationsList = try JSONDecoder().decode(AllStationsList.self,
+                                                     from: data)
+            print(allStationsList.countries?.count)
+        } catch {
+            print("Error fetching all stations list: \(error)")
+        }
+    }
+}
+
+func getCopyright() {
+    let client = Client(
+        serverURL: try! Servers.server1(),
+        transport: URLSessionTransport()
+    )
+    
+    let service = NearestStationsService(
+        client: client,
+        apikey: "d52e2ffc-ec87-4d27-8247-5c7f412d514e"
+    )
+    
+    Task {
+        let copyright = try await service.getCopyright()
+        print(copyright)
+    }
+}

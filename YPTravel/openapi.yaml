@@ -143,6 +143,131 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListOfStations'
+                
+  /v3.0/nearest_settlement/:
+    get:
+      tags:
+      - getNearestSettlement
+      summary: Ближайший город
+      operationId: getNearestSettlement
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: lat
+        in: query
+        description: широта
+        required: true
+        schema:
+          type: number
+      - name: lng
+        in: query
+        description: долгота
+        required: true
+        schema:
+          type: number
+      - name: distance
+        in: query
+        description: радиус охвата
+        required: false
+        schema:
+          type: integer
+      - name: format
+        in: query
+        description: json или xml
+        required: false
+        schema:
+          type: string
+      - name: lang
+        in: query
+        description: lang
+        required: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NearestSettlement'
+                
+  /v3.0/carrier/:
+    get:
+      tags:
+      - getCarrierInformation
+      summary: Информация о перевозчике
+      operationId: getCarrierInformation
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: code
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: system
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carriers'
+  
+  /v3.0/stations_list/:
+    get:
+      tags:
+      - getAllStationsList
+      summary: Список всех доступных станций
+      operationId: getAllStationsList
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AllStationsList'
+            text/html:
+              schema: {}
+              
+  /v3.0/copyright/:
+    get:
+      tags:
+      - getCopyright
+      summary: Копирайт Яндекс Расписаний
+      operationId: getCopyright
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Copyrights'
     
 components:
   schemas:
@@ -229,6 +354,42 @@ components:
           type: string
         start_time:
           type: string
+          
+    NearestSettlement:
+      type: object
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        short_title:
+          type: string
+        popular_title:
+          type: string
+        code:
+          type: string
+        lat:
+          type: number
+        lng:
+          type: number
+        distance:
+          type: number
+          
+    Carriers:
+      type: object
+      properties:
+        carriers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Carrier'
+    
+    AllStationsList:
+      type: object
+      properties:
+        countries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Country'
             
     Pagination:
       type: object
@@ -259,6 +420,10 @@ components:
           type: number
         lng:
           type: number
+        latitude:
+          type: number
+        longitude:
+          type: number
         station_type:
           type: string
         station_type_name:
@@ -267,6 +432,8 @@ components:
           type: string
         distance:
           type: number
+        direction:
+          type: string
         majority:
           type: integer
         type_choices:
@@ -449,6 +616,8 @@ components:
           type: string
         codes:
           $ref: '#/components/schemas/Codes'
+        address:
+          type: string
         adress:
           type: string
         logo:
@@ -556,6 +725,78 @@ components:
         cents:
           type: integer
           
+    Country:
+      type: object
+      properties:
+        regions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Region'
+        codes:
+          $ref: '#/components/schemas/CountryCode'
+        title:
+          type: string
+          
+    Region:
+      type: object
+      properties:
+        settlements:
+          type: array
+          items:
+            $ref: '#/components/schemas/Settlement'
+        codes:
+          $ref: '#/components/schemas/CountryCode'
+        title:
+          type: string
+          
+    CountryCode:
+      type: object
+      properties:
+        esr_code:
+          type: string
+          nullable: true
+        yandex_code:
+          type: string
+          nullable: true
+          
+    Settlement:
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/CountryCode'
+        stations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Station'
+            
+    Copyrights:
+      type: object
+      properties:
+        copyright:
+          $ref: '#/components/schemas/Copyright'
+    
+    Copyright:
+      type: object
+      properties:
+        logo_vm:
+          type: string
+        url:
+          type: string
+        logo_vd:
+          type: string
+        logo_hy:
+          type: string
+        logo_hd:
+          type: string
+        logo_vy:
+          type: string
+        text:
+          type: string
+        logo_hm:
+          type: string
+        
     From:
       type: object
       properties:
