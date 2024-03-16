@@ -420,10 +420,6 @@ components:
           type: number
         lng:
           type: number
-        latitude:
-          type: number
-        longitude:
-          type: number
         station_type:
           type: string
         station_type_name:
