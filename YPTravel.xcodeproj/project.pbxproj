@@ -24,6 +24,7 @@
 		40B23D6F2BC039160094D545 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B23D6E2BC039160094D545 /* Colors.xcassets */; };
 		40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7D2BC03E540094D545 /* MainViewModel.swift */; };
 		40B23D802BC03E730094D545 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7F2BC03E730094D545 /* MainModel.swift */; };
+		40B23D822BC044D00094D545 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D812BC044D00094D545 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		40B23D6E2BC039160094D545 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		40B23D7D2BC03E540094D545 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		40B23D7F2BC03E730094D545 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		40B23D812BC044D00094D545 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				409EB2EB2BA589D900A0D288 /* Resources.swift */,
+				40B23D812BC044D00094D545 /* Fonts.swift */,
 				409EB2F82BA5927600A0D288 /* UIConstants.swift */,
 				409FDE052BA2ECF5007BD877 /* Assets.xcassets */,
 				40B23D6D2BC038F90094D545 /* Images */,
@@ -294,6 +297,7 @@
 			files = (
 				409FDE042BA2ECF3007BD877 /* MainContentView.swift in Sources */,
 				409FDE022BA2ECF3007BD877 /* YPTravelApp.swift in Sources */,
+				40B23D822BC044D00094D545 /* Fonts.swift in Sources */,
 				409EB2F62BA5924600A0D288 /* CustomButton.swift in Sources */,
 				409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */,
 				409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */,
