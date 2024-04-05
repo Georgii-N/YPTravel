@@ -1,20 +1,10 @@
 import SwiftUI
 
-struct ContentView: View {
+struct MainContentView: View {
     
     private let networkClient: NetworkClientProtocol = NetworkClient()
     var body: some View {
-        VStack {
-            CustomButton(title: "getTripsSchedule", action: getTripsSchedule)
-            CustomButton(title: "tripsByStation", action: tripsByStation)
-            CustomButton(title: "getListOfStations", action: getListOfStations)
-            CustomButton(title: "getNearestStations", action: getNearestStations)
-            CustomButton(title: "getNearestSettlement", action: getNearestSettlement)
-            CustomButton(title: "getCarrierInformation", action: getCarrierInformation)
-            CustomButton(title: "getAllStationsList", action: getAllStationsList)
-            CustomButton(title: "getCopyright", action: getCopyright)
-        }
-        .padding()
+        Text("Я")
     }
     
     private func getTripsSchedule() {
@@ -84,5 +74,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MainContentView()
 }

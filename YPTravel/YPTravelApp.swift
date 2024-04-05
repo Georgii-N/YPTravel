@@ -4,7 +4,7 @@ import SwiftUI
 struct YPTravelApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainContentView()
         }
     }
 }

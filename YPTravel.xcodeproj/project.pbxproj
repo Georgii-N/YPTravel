@@ -17,9 +17,13 @@
 		409EB2F62BA5924600A0D288 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2F52BA5924600A0D288 /* CustomButton.swift */; };
 		409EB2F92BA5927600A0D288 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2F82BA5927600A0D288 /* UIConstants.swift */; };
 		409FDE022BA2ECF3007BD877 /* YPTravelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409FDE012BA2ECF3007BD877 /* YPTravelApp.swift */; };
-		409FDE042BA2ECF3007BD877 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409FDE032BA2ECF3007BD877 /* ContentView.swift */; };
+		409FDE042BA2ECF3007BD877 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409FDE032BA2ECF3007BD877 /* MainContentView.swift */; };
 		409FDE062BA2ECF5007BD877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409FDE052BA2ECF5007BD877 /* Assets.xcassets */; };
 		409FDE092BA2ECF5007BD877 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409FDE082BA2ECF5007BD877 /* Preview Assets.xcassets */; };
+		40B23D6C2BC038670094D545 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B23D6B2BC038670094D545 /* Images.xcassets */; };
+		40B23D6F2BC039160094D545 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B23D6E2BC039160094D545 /* Colors.xcassets */; };
+		40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7D2BC03E540094D545 /* MainViewModel.swift */; };
+		40B23D802BC03E730094D545 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7F2BC03E730094D545 /* MainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +36,13 @@
 		409EB2F82BA5927600A0D288 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		409FDDFE2BA2ECF3007BD877 /* YPTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YPTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409FDE012BA2ECF3007BD877 /* YPTravelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPTravelApp.swift; sourceTree = "<group>"; };
-		409FDE032BA2ECF3007BD877 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		409FDE032BA2ECF3007BD877 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		409FDE052BA2ECF5007BD877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		409FDE082BA2ECF5007BD877 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		40B23D6B2BC038670094D545 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		40B23D6E2BC039160094D545 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		40B23D7D2BC03E540094D545 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		40B23D7F2BC03E730094D545 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,8 @@
 				409EB2EB2BA589D900A0D288 /* Resources.swift */,
 				409EB2F82BA5927600A0D288 /* UIConstants.swift */,
 				409FDE052BA2ECF5007BD877 /* Assets.xcassets */,
+				40B23D6D2BC038F90094D545 /* Images */,
+				40B23D6E2BC039160094D545 /* Colors.xcassets */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -130,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				409FDE012BA2ECF3007BD877 /* YPTravelApp.swift */,
-				409FDE032BA2ECF3007BD877 /* ContentView.swift */,
+				40B23D712BC03D730094D545 /* Screens */,
 				409EB2F32BA5921B00A0D288 /* UI */,
 				409EB2EE2BA5913C00A0D288 /* Services */,
 				409EB2FA2BA592E400A0D288 /* SupportingFiles */,
@@ -146,6 +156,56 @@
 				409FDE082BA2ECF5007BD877 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		40B23D6D2BC038F90094D545 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				40B23D6B2BC038670094D545 /* Images.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		40B23D712BC03D730094D545 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				40B23D742BC03D7B0094D545 /* MainScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		40B23D742BC03D7B0094D545 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				40B23D782BC03DFA0094D545 /* View */,
+				40B23D7C2BC03E140094D545 /* ViewModel */,
+				40B23D7B2BC03E030094D545 /* Model */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		40B23D782BC03DFA0094D545 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				409FDE032BA2ECF3007BD877 /* MainContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40B23D7B2BC03E030094D545 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40B23D7F2BC03E730094D545 /* MainModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		40B23D7C2BC03E140094D545 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				40B23D7D2BC03E540094D545 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				409FDE092BA2ECF5007BD877 /* Preview Assets.xcassets in Resources */,
+				40B23D6C2BC038670094D545 /* Images.xcassets in Resources */,
 				4085567F2BA3205900F1B959 /* openapi.yaml in Resources */,
+				40B23D6F2BC039160094D545 /* Colors.xcassets in Resources */,
 				409FDE062BA2ECF5007BD877 /* Assets.xcassets in Resources */,
 				4085567D2BA3205000F1B959 /* openapi-generator-config.yaml in Resources */,
 			);
@@ -230,13 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				409FDE042BA2ECF3007BD877 /* ContentView.swift in Sources */,
+				409FDE042BA2ECF3007BD877 /* MainContentView.swift in Sources */,
 				409FDE022BA2ECF3007BD877 /* YPTravelApp.swift in Sources */,
 				409EB2F62BA5924600A0D288 /* CustomButton.swift in Sources */,
 				409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */,
 				409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */,
+				40B23D802BC03E730094D545 /* MainModel.swift in Sources */,
 				409EB2E92BA588CC00A0D288 /* NetworkClientProtocol.swift in Sources */,
 				409EB2F92BA5927600A0D288 /* UIConstants.swift in Sources */,
+				40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
