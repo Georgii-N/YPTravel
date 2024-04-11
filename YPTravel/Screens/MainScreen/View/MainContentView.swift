@@ -1,13 +1,27 @@
 import SwiftUI
 
 struct MainContentView: View {
+    @State private var text: String = ""
     
     var body: some View {
-        Text("Я")
-        CustomButton(title: "Я") {
+        
+        
+        TabView {
+            ZStack {
+                RouteChoosingView(text: $text)
+            }
+            .tabItem {
+                Image(.tabSchedule)
+            }
+            
+            ZStack {
+                RouteChoosingView(text: $text)
+            }
+            .tabItem {
+                Image(.tabSettings)
+            }
             
         }
-        .background(.ypBlack)
     }
 }
 
