@@ -2,26 +2,28 @@ import SwiftUI
 
 struct MainContentView: View {
     @State private var text: String = ""
+    @State private var selection = 0
     
     var body: some View {
         
-        
-        TabView {
+        TabView(selection: $selection) {
             ZStack {
                 RouteChoosingView(text: $text)
             }
             .tabItem {
-                Image(.tabSchedule)
+                Label("", image: "tabSchedule")
             }
+            .tag(0)
             
             ZStack {
-                RouteChoosingView(text: $text)
+                Text(text)
             }
             .tabItem {
-                Image(.tabSettings)
+                Label("", image: "tabSettings")
             }
-            
+            .tag(1)
         }
+        .tint(.black)
     }
 }
 
