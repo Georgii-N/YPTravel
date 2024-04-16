@@ -1,29 +1,33 @@
 import SwiftUI
 
 struct MainContentView: View {
-    @State private var text: String = ""
-    @State private var selection = 0
+    
+    @State private var path: [String] = []
     
     var body: some View {
-        
-        TabView(selection: $selection) {
-            ZStack {
-                RouteChoosingView(text: $text)
+        NavigationStack(path: $path) {
+        TabView() {
+                ZStack {
+                    RouteChoosingView(path: $path)
+                }
+                .navigationDestination(for: String.self) { id in
+                    if id == "ChoosingCityView" {
+                        ChoosingCityView(path: $path)
+                    }
+                }
+                .tabItem {
+                    Label("", image: "tabSchedule")
+                }
+                
+                ZStack {
+                    Text("2")
+                }
+                .tabItem {
+                    Label("", image: "tabSettings")
+                }
             }
-            .tabItem {
-                Label("", image: "tabSchedule")
-            }
-            .tag(0)
-            
-            ZStack {
-                Text(text)
-            }
-            .tabItem {
-                Label("", image: "tabSettings")
-            }
-            .tag(1)
+            .tint(.black)
         }
-        .tint(.black)
     }
 }
 

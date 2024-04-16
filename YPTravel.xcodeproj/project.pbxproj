@@ -11,6 +11,8 @@
 		408556792BA3201500F1B959 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 408556782BA3201500F1B959 /* OpenAPIURLSession */; };
 		4085567D2BA3205000F1B959 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */; };
 		4085567F2BA3205900F1B959 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 4085567E2BA3205900F1B959 /* openapi.yaml */; };
+		409B13382BCD30F800A2AA5A /* ChoosingCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B13372BCD30F800A2AA5A /* ChoosingCityView.swift */; };
+		409B133A2BCD51C100A2AA5A /* ChoosingCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B13392BCD51C100A2AA5A /* ChoosingCityViewModel.swift */; };
 		409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2E52BA588BE00A0D288 /* NetworkClient.swift */; };
 		409EB2E92BA588CC00A0D288 /* NetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2E82BA588CC00A0D288 /* NetworkClientProtocol.swift */; };
 		409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2EB2BA589D900A0D288 /* Resources.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		4085567E2BA3205900F1B959 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
+		409B13372BCD30F800A2AA5A /* ChoosingCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCityView.swift; sourceTree = "<group>"; };
+		409B13392BCD51C100A2AA5A /* ChoosingCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCityViewModel.swift; sourceTree = "<group>"; };
 		409EB2E52BA588BE00A0D288 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		409EB2E82BA588CC00A0D288 /* NetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientProtocol.swift; sourceTree = "<group>"; };
 		409EB2EB2BA589D900A0D288 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
@@ -63,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		409B13312BCD309100A2AA5A /* ChoosingCityView */ = {
+			isa = PBXGroup;
+			children = (
+				409B13372BCD30F800A2AA5A /* ChoosingCityView.swift */,
+				409B13392BCD51C100A2AA5A /* ChoosingCityViewModel.swift */,
+			);
+			path = ChoosingCityView;
+			sourceTree = "<group>";
+		};
 		409EB2EA2BA5894E00A0D288 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				40B23D742BC03D7B0094D545 /* MainScreen */,
+				409B13312BCD309100A2AA5A /* ChoosingCityView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -307,10 +321,12 @@
 				409EB2F62BA5924600A0D288 /* CustomButton.swift in Sources */,
 				409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */,
 				409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */,
+				409B133A2BCD51C100A2AA5A /* ChoosingCityViewModel.swift in Sources */,
 				40B23D802BC03E730094D545 /* MainModel.swift in Sources */,
 				409EB2E92BA588CC00A0D288 /* NetworkClientProtocol.swift in Sources */,
 				409EB2F92BA5927600A0D288 /* UIConstants.swift in Sources */,
 				40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */,
+				409B13382BCD30F800A2AA5A /* ChoosingCityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
