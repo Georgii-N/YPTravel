@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402C0FE02BD3B2EC00336D15 /* CustomListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402C0FDF2BD3B2EC00336D15 /* CustomListRow.swift */; };
+		40693DF42BD271A7006DD512 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40693DF32BD271A7006DD512 /* CustomSearchBar.swift */; };
 		408556762BA31FE100F1B959 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 408556752BA31FE100F1B959 /* OpenAPIRuntime */; };
 		408556792BA3201500F1B959 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 408556782BA3201500F1B959 /* OpenAPIURLSession */; };
 		4085567D2BA3205000F1B959 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */; };
@@ -16,7 +18,6 @@
 		409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2E52BA588BE00A0D288 /* NetworkClient.swift */; };
 		409EB2E92BA588CC00A0D288 /* NetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2E82BA588CC00A0D288 /* NetworkClientProtocol.swift */; };
 		409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2EB2BA589D900A0D288 /* Resources.swift */; };
-		409EB2F62BA5924600A0D288 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2F52BA5924600A0D288 /* CustomButton.swift */; };
 		409EB2F92BA5927600A0D288 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2F82BA5927600A0D288 /* UIConstants.swift */; };
 		409FDE022BA2ECF3007BD877 /* YPTravelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409FDE012BA2ECF3007BD877 /* YPTravelApp.swift */; };
 		409FDE042BA2ECF3007BD877 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409FDE032BA2ECF3007BD877 /* MainContentView.swift */; };
@@ -27,10 +28,11 @@
 		40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7D2BC03E540094D545 /* MainViewModel.swift */; };
 		40B23D802BC03E730094D545 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7F2BC03E730094D545 /* MainModel.swift */; };
 		40B23D822BC044D00094D545 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D812BC044D00094D545 /* Fonts.swift */; };
-		40F3A5672BC83137004EB53E /* RouteChoosingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F3A5662BC83137004EB53E /* RouteChoosingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		402C0FDF2BD3B2EC00336D15 /* CustomListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListRow.swift; sourceTree = "<group>"; };
+		40693DF32BD271A7006DD512 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		4085567E2BA3205900F1B959 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		409B13372BCD30F800A2AA5A /* ChoosingCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCityView.swift; sourceTree = "<group>"; };
@@ -38,7 +40,6 @@
 		409EB2E52BA588BE00A0D288 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		409EB2E82BA588CC00A0D288 /* NetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientProtocol.swift; sourceTree = "<group>"; };
 		409EB2EB2BA589D900A0D288 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
-		409EB2F52BA5924600A0D288 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		409EB2F82BA5927600A0D288 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		409FDDFE2BA2ECF3007BD877 /* YPTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YPTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409FDE012BA2ECF3007BD877 /* YPTravelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPTravelApp.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		40B23D7F2BC03E730094D545 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		40B23D812BC044D00094D545 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		40F3A5622BC7FE6F004EB53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		40F3A5662BC83137004EB53E /* RouteChoosingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteChoosingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,8 @@
 		409EB2F42BA5923100A0D288 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				409EB2F52BA5924600A0D288 /* CustomButton.swift */,
+				40693DF32BD271A7006DD512 /* CustomSearchBar.swift */,
+				402C0FDF2BD3B2EC00336D15 /* CustomListRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -209,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				409FDE032BA2ECF3007BD877 /* MainContentView.swift */,
-				40F3A5662BC83137004EB53E /* RouteChoosingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,11 +314,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40F3A5672BC83137004EB53E /* RouteChoosingView.swift in Sources */,
+				402C0FE02BD3B2EC00336D15 /* CustomListRow.swift in Sources */,
 				409FDE042BA2ECF3007BD877 /* MainContentView.swift in Sources */,
+				40693DF42BD271A7006DD512 /* CustomSearchBar.swift in Sources */,
 				409FDE022BA2ECF3007BD877 /* YPTravelApp.swift in Sources */,
 				40B23D822BC044D00094D545 /* Fonts.swift in Sources */,
-				409EB2F62BA5924600A0D288 /* CustomButton.swift in Sources */,
 				409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */,
 				409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */,
 				409B133A2BCD51C100A2AA5A /* ChoosingCityViewModel.swift in Sources */,
