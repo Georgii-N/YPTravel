@@ -77,9 +77,13 @@ struct MainContentView: View {
             }
             .navigationDestination(for: String.self) { id in
                 if id == "ChoosingCityViewFrom" {
-                    ChoosingCityView(path: $path, selectedCity: $fromCity)
+                    ChoosingCityView(path: $path, selectedCity: $fromCity, direction: .from)
                 } else if id == "ChoosingCityViewTo" {
-                    ChoosingCityView(path: $path, selectedCity: $toCity)
+                    ChoosingCityView(path: $path, selectedCity: $toCity, direction: .to)
+                } else if id == "ChoosingStationViewTo" {
+                    ChoosingStationView(path: $path, selectedStation: $toCity)
+                } else if id == "ChoosingStationViewFrom" {
+                    ChoosingStationView(path: $path, selectedStation: $fromCity)
                 }
             }
             .tint(.black)
@@ -87,7 +91,10 @@ struct MainContentView: View {
     }
 }
 
-
 #Preview {
     MainContentView()
+}
+
+enum Direction {
+    case from, to
 }
