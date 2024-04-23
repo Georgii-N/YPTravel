@@ -11,6 +11,8 @@
 		405F17192BD4E8BE009F301C /* ChoosingStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405F17182BD4E8BE009F301C /* ChoosingStationView.swift */; };
 		405F171C2BD4E940009F301C /* ChoosingStatonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405F171B2BD4E940009F301C /* ChoosingStatonViewModel.swift */; };
 		40693DF42BD271A7006DD512 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40693DF32BD271A7006DD512 /* CustomSearchBar.swift */; };
+		407ED3E22BD552DB000F3B42 /* TrainScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407ED3E12BD552DB000F3B42 /* TrainScheduleView.swift */; };
+		407ED3E42BD552EA000F3B42 /* TrainScheduleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407ED3E32BD552EA000F3B42 /* TrainScheduleRow.swift */; };
 		408556762BA31FE100F1B959 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 408556752BA31FE100F1B959 /* OpenAPIRuntime */; };
 		408556792BA3201500F1B959 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 408556782BA3201500F1B959 /* OpenAPIURLSession */; };
 		4085567D2BA3205000F1B959 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */; };
@@ -37,6 +39,8 @@
 		405F17182BD4E8BE009F301C /* ChoosingStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingStationView.swift; sourceTree = "<group>"; };
 		405F171B2BD4E940009F301C /* ChoosingStatonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingStatonViewModel.swift; sourceTree = "<group>"; };
 		40693DF32BD271A7006DD512 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		407ED3E12BD552DB000F3B42 /* TrainScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainScheduleView.swift; sourceTree = "<group>"; };
+		407ED3E32BD552EA000F3B42 /* TrainScheduleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainScheduleRow.swift; sourceTree = "<group>"; };
 		4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		4085567E2BA3205900F1B959 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		409B13372BCD30F800A2AA5A /* ChoosingCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCityView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 		407ED3DD2BD54F0A000F3B42 /* TrainSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				407ED3E12BD552DB000F3B42 /* TrainScheduleView.swift */,
+				407ED3E32BD552EA000F3B42 /* TrainScheduleRow.swift */,
 			);
 			path = TrainSchedule;
 			sourceTree = "<group>";
@@ -210,10 +216,10 @@
 		40B23D712BC03D730094D545 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				407ED3DD2BD54F0A000F3B42 /* TrainSchedule */,
 				40B23D742BC03D7B0094D545 /* MainScreen */,
 				409B13312BCD309100A2AA5A /* ChoosingCity */,
 				405F17102BD4E867009F301C /* ChoosingStation */,
+				407ED3DD2BD54F0A000F3B42 /* TrainSchedule */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -342,8 +348,10 @@
 				409FDE022BA2ECF3007BD877 /* YPTravelApp.swift in Sources */,
 				40B23D822BC044D00094D545 /* Fonts.swift in Sources */,
 				409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */,
+				407ED3E42BD552EA000F3B42 /* TrainScheduleRow.swift in Sources */,
 				409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */,
 				409B133A2BCD51C100A2AA5A /* ChoosingCityViewModel.swift in Sources */,
+				407ED3E22BD552DB000F3B42 /* TrainScheduleView.swift in Sources */,
 				40B23D802BC03E730094D545 /* MainModel.swift in Sources */,
 				409EB2E92BA588CC00A0D288 /* NetworkClientProtocol.swift in Sources */,
 				405F171C2BD4E940009F301C /* ChoosingStatonViewModel.swift in Sources */,
