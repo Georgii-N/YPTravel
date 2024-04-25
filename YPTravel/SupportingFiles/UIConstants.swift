@@ -13,6 +13,8 @@ enum UIConstants {
     static let searchButtonWidth: CGFloat = 150
     static let searchButtonHeight: CGFloat = 60
     
+    
+    
     enum CustomSearchBar {
         static let cornerRadius: CGFloat = 10
         
@@ -20,5 +22,13 @@ enum UIConstants {
         static let paddingHorizontal: CGFloat = 16
         
         static let height: CGFloat = 36
+    }
+    
+    enum TrainScheduleRow {
+        static let cornerRadius: CGFloat = 24
+        static let sideImage: CGFloat = 38
+        
+        static let smallInset: CGFloat = 4
+        static let mediumInset: CGFloat = 14
     }
 }
