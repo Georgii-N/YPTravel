@@ -5,7 +5,11 @@ enum UIConstants {
     static let cornerRadiusMedium: CGFloat = 20
     static let cornerRadiusLarge: CGFloat = 40
     
+    static let smallPadding: CGFloat = 4
+    static let paddingLarge: CGFloat = 24
+    
     static let padding: CGFloat = 16
+    
     static let paddingRow: CGFloat = 19
     
     static let swapButtonSide: CGFloat = 36

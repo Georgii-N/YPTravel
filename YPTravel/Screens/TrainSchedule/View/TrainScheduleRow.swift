@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct TrainScheduleRow: View {
+    var route: RouteModel
+    
     var body: some View {
         VStack(spacing: .zero) {
             HStack {
@@ -9,17 +11,17 @@ struct TrainScheduleRow: View {
                 VStack(spacing: .zero) {
                     
                     HStack(spacing: .zero){
-                        Text("ФГК")
+                        Text(route.company)
                             .font(.regularMedium)
                             .foregroundStyle(.ypBlackUniversal)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                        Text("14 января")
+                        Text(route.date)
                             .font(.regularSmall)
                             .foregroundStyle(.ypBlackUniversal)
                             .frame(maxWidth: .infinity, alignment: .trailing)
                         
                     }
-                    Text("С пересадкой в Костроме")
+                    Text(route.transferDetails ?? " ")
                         .font(.regularSmall)
                         .foregroundStyle(.ypRed)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -27,7 +29,7 @@ struct TrainScheduleRow: View {
             }
             .padding(.top, UIConstants.TrainScheduleRow.mediumInset)
             HStack {
-                Text("22:30")
+                Text(route.departureTime)
                     .font(.regularMedium)
                     .foregroundStyle(.ypBlackUniversal)
 
@@ -35,7 +37,7 @@ struct TrainScheduleRow: View {
                     .frame(height: 1)
                     .foregroundStyle(.ypBlackUniversal)
 
-                Text("20 часов")
+                Text(route.tripDuration)
                     .font(.regularSmall)
                     .foregroundStyle(.ypBlackUniversal)
 
@@ -43,7 +45,7 @@ struct TrainScheduleRow: View {
                     .frame(height: 1)
                     .foregroundStyle(.ypBlackUniversal)
 
-                Text("08:15")
+                Text(route.arrivalTime)
                     .font(.regularMedium)
                     .foregroundStyle(.ypBlackUniversal)
             }
@@ -56,5 +58,5 @@ struct TrainScheduleRow: View {
 }
 
 #Preview {
-    TrainScheduleRow()
+    TrainScheduleRow(route: RouteModel(company: "ФГК", date: "14 января", transferDetails: "С пересадкой в Костроме", departureTime: "22:30", tripDuration: "20 часов", arrivalTime: "08:15"))
 }

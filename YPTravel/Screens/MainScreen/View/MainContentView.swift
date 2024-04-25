@@ -54,7 +54,7 @@ struct MainContentView: View {
                    
                     if toCity != nil && fromCity != nil {
                         Button("Найти") {
-                            
+                            path.append("TrainScheduleView")
                         }
                         .frame(width: UIConstants.searchButtonWidth, height: UIConstants.searchButtonHeight)
                         .font(.boldSmall)
@@ -84,6 +84,8 @@ struct MainContentView: View {
                     ChoosingStationView(path: $path, selectedStation: $toCity)
                 } else if id == "ChoosingStationViewFrom" {
                     ChoosingStationView(path: $path, selectedStation: $fromCity)
+                }  else if id == "TrainScheduleView" {
+                    TrainScheduleView(path: $path)
                 }
             }
             .tint(.black)

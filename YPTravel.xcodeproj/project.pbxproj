@@ -17,6 +17,8 @@
 		408556792BA3201500F1B959 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 408556782BA3201500F1B959 /* OpenAPIURLSession */; };
 		4085567D2BA3205000F1B959 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */; };
 		4085567F2BA3205900F1B959 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 4085567E2BA3205900F1B959 /* openapi.yaml */; };
+		408CF1842BDA9F6C00EA2F59 /* TrainScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408CF1832BDA9F6C00EA2F59 /* TrainScheduleViewModel.swift */; };
+		408CF18F2BDAA84800EA2F59 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408CF18E2BDAA84800EA2F59 /* RouteModel.swift */; };
 		409B13382BCD30F800A2AA5A /* ChoosingCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B13372BCD30F800A2AA5A /* ChoosingCityView.swift */; };
 		409B133A2BCD51C100A2AA5A /* ChoosingCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B13392BCD51C100A2AA5A /* ChoosingCityViewModel.swift */; };
 		409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EB2E52BA588BE00A0D288 /* NetworkClient.swift */; };
@@ -43,6 +45,8 @@
 		407ED3E32BD552EA000F3B42 /* TrainScheduleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainScheduleRow.swift; sourceTree = "<group>"; };
 		4085567C2BA3205000F1B959 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		4085567E2BA3205900F1B959 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
+		408CF1832BDA9F6C00EA2F59 /* TrainScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainScheduleViewModel.swift; sourceTree = "<group>"; };
+		408CF18E2BDAA84800EA2F59 /* RouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
 		409B13372BCD30F800A2AA5A /* ChoosingCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCityView.swift; sourceTree = "<group>"; };
 		409B13392BCD51C100A2AA5A /* ChoosingCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCityViewModel.swift; sourceTree = "<group>"; };
 		409EB2E52BA588BE00A0D288 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -87,10 +91,36 @@
 		407ED3DD2BD54F0A000F3B42 /* TrainSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				408CF1882BDA9F8900EA2F59 /* View */,
+				408CF1862BDA9F7600EA2F59 /* ViewModel */,
+				408CF18A2BDAA83300EA2F59 /* Model */,
+			);
+			path = TrainSchedule;
+			sourceTree = "<group>";
+		};
+		408CF1862BDA9F7600EA2F59 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				408CF1832BDA9F6C00EA2F59 /* TrainScheduleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		408CF1882BDA9F8900EA2F59 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				407ED3E12BD552DB000F3B42 /* TrainScheduleView.swift */,
 				407ED3E32BD552EA000F3B42 /* TrainScheduleRow.swift */,
 			);
-			path = TrainSchedule;
+			path = View;
+			sourceTree = "<group>";
+		};
+		408CF18A2BDAA83300EA2F59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				408CF18E2BDAA84800EA2F59 /* RouteModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		409B13312BCD309100A2AA5A /* ChoosingCity */ = {
@@ -347,9 +377,11 @@
 				40693DF42BD271A7006DD512 /* CustomSearchBar.swift in Sources */,
 				409FDE022BA2ECF3007BD877 /* YPTravelApp.swift in Sources */,
 				40B23D822BC044D00094D545 /* Fonts.swift in Sources */,
+				408CF18F2BDAA84800EA2F59 /* RouteModel.swift in Sources */,
 				409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */,
 				407ED3E42BD552EA000F3B42 /* TrainScheduleRow.swift in Sources */,
 				409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */,
+				408CF1842BDA9F6C00EA2F59 /* TrainScheduleViewModel.swift in Sources */,
 				409B133A2BCD51C100A2AA5A /* ChoosingCityViewModel.swift in Sources */,
 				407ED3E22BD552DB000F3B42 /* TrainScheduleView.swift in Sources */,
 				40B23D802BC03E730094D545 /* MainModel.swift in Sources */,
