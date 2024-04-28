@@ -34,6 +34,8 @@
 		40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7D2BC03E540094D545 /* MainViewModel.swift */; };
 		40B23D802BC03E730094D545 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7F2BC03E730094D545 /* MainModel.swift */; };
 		40B23D822BC044D00094D545 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D812BC044D00094D545 /* Fonts.swift */; };
+		40E866502BDE242F00B5A0ED /* FilterScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E8664F2BDE242F00B5A0ED /* FilterScheduleView.swift */; };
+		40E866522BDE267400B5A0ED /* CheckBoxRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E866512BDE267400B5A0ED /* CheckBoxRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		40B23D7D2BC03E540094D545 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		40B23D7F2BC03E730094D545 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		40B23D812BC044D00094D545 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		40E8664F2BDE242F00B5A0ED /* FilterScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScheduleView.swift; sourceTree = "<group>"; };
+		40E866512BDE267400B5A0ED /* CheckBoxRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxRow.swift; sourceTree = "<group>"; };
 		40F3A5622BC7FE6F004EB53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +254,7 @@
 				409B13312BCD309100A2AA5A /* ChoosingCity */,
 				405F17102BD4E867009F301C /* ChoosingStation */,
 				407ED3DD2BD54F0A000F3B42 /* TrainSchedule */,
+				40E8664D2BDE23F400B5A0ED /* FilterSchedule */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -286,6 +291,15 @@
 				40B23D7D2BC03E540094D545 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		40E8664D2BDE23F400B5A0ED /* FilterSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				40E8664F2BDE242F00B5A0ED /* FilterScheduleView.swift */,
+				40E866512BDE267400B5A0ED /* CheckBoxRow.swift */,
+			);
+			path = FilterSchedule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +392,7 @@
 				409FDE022BA2ECF3007BD877 /* YPTravelApp.swift in Sources */,
 				40B23D822BC044D00094D545 /* Fonts.swift in Sources */,
 				408CF18F2BDAA84800EA2F59 /* RouteModel.swift in Sources */,
+				40E866522BDE267400B5A0ED /* CheckBoxRow.swift in Sources */,
 				409EB2EC2BA589D900A0D288 /* Resources.swift in Sources */,
 				407ED3E42BD552EA000F3B42 /* TrainScheduleRow.swift in Sources */,
 				409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */,
@@ -389,6 +404,7 @@
 				405F171C2BD4E940009F301C /* ChoosingStatonViewModel.swift in Sources */,
 				409EB2F92BA5927600A0D288 /* UIConstants.swift in Sources */,
 				40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */,
+				40E866502BDE242F00B5A0ED /* FilterScheduleView.swift in Sources */,
 				409B13382BCD30F800A2AA5A /* ChoosingCityView.swift in Sources */,
 				405F17192BD4E8BE009F301C /* ChoosingStationView.swift in Sources */,
 			);
