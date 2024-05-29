@@ -42,7 +42,7 @@ struct ChoosingStationView: View {
                         path.removeLast()
                     }) {
                         Image(systemName: "chevron.backward")
-                            .foregroundColor(.black)
+                            .foregroundColor(.ypBlack)
                     }
                 }
             }

@@ -11,31 +11,31 @@ struct ChoosingCityView: View {
     var body: some View {
         GeometryReader { _ in
             VStack {
-                            CustomSearchBar(text: $viewModel.searchText)
+                CustomSearchBar(text: $viewModel.searchText)
+                    .padding(.horizontal)
+                if viewModel.filteredCities.isEmpty {
+                    VStack {
+                        Spacer()
+                        Text("Город не найден")
+                            .foregroundColor(.ypBlack)
+                            .font(.boldMedium)
+                        Spacer()
+                    }
+                } else {
+                    LazyVStack(spacing: .zero) {
+                        ForEach(viewModel.filteredCities, id: \.self) { city in
+                            CustomListRow(text: city)
                                 .padding(.horizontal)
-                            if viewModel.filteredCities.isEmpty {
-                                VStack {
-                                    Spacer()
-                                    Text("Город не найден")
-                                        .foregroundColor(.ypBlack)
-                                        .font(.boldMedium)
-                                    Spacer()
+                                .onTapGesture {
+                                    selectedCity = city
+                                    let destination = direction == .to ? "ChoosingStationViewTo" : "ChoosingStationViewFrom"
+                                    path.append(destination)
                                 }
-                            } else {
-                                LazyVStack(spacing: .zero) {
-                                    ForEach(viewModel.filteredCities, id: \.self) { city in
-                                        CustomListRow(text: city)
-                                            .padding(.horizontal)
-                                            .onTapGesture {
-                                                selectedCity = city
-                                                let destination = direction == .to ? "ChoosingStationViewTo" : "ChoosingStationViewFrom"
-                                                path.append(destination)
-                                            }
-                                    }
-                                }
-                            }
-                            Spacer()
                         }
+                    }
+                }
+                Spacer()
+            }
             
             .navigationTitle("Выбор города")
             .navigationBarTitleDisplayMode(.inline)

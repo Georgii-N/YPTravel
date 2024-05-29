@@ -2,10 +2,20 @@ import SwiftUI
 
 struct MainContentView: View {
     
+    @Binding var isDarkMode: Bool
+
     @State private var path: [String] = []
+    @State private var filterOptions = FilterSettings(morningSelected: false,
+                                                      afternoonSelected: false,
+                                                      eveningSelected: false,
+                                                      nightSelected: false,
+                                                      showTransfers: nil)
+    
     @State private var toCity: String? = nil
     @State private var fromCity: String? = nil
     @State private var isShowingSearchButton = false
+    
+    @State private var carrier: String? = nil
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -15,9 +25,9 @@ struct MainContentView: View {
                         VStack(spacing: .zero) {
                             Text(fromCity ?? "Откуда")
                                 .padding()
-                                .foregroundColor(fromCity == nil ? .ypGray : .ypBlack)
+                                .foregroundColor(fromCity == nil ? .ypGray : .ypBlackUniversal)
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(.ypWhite)
+                                .background(.ypWhiteUniversal)
                                 .font(.regularMedium)
                                 .onTapGesture {
                                     path.append("ChoosingCityViewFrom")
@@ -25,9 +35,9 @@ struct MainContentView: View {
                             
                             Text(toCity ?? "Куда")
                                 .padding()
-                                .foregroundColor(toCity == nil ? .ypGray : .ypBlack)
+                                .foregroundColor(toCity == nil ? .ypGray : .ypBlackUniversal)
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(.ypWhite)
+                                .background(.ypWhiteUniversal)
                                 .font(.regularMedium)
                                 .onTapGesture {
                                     path.append("ChoosingCityViewTo")
@@ -43,7 +53,7 @@ struct MainContentView: View {
                             Image(.textFieldChange)
                         }
                         .frame(width: UIConstants.swapButtonSide, height: UIConstants.swapButtonSide)
-                        .background(.ypWhite)
+                        .background(.ypWhiteUniversal)
                         .cornerRadius(UIConstants.cornerRadiusLarge)
                         .padding(.trailing, UIConstants.padding)
                     }
@@ -59,7 +69,7 @@ struct MainContentView: View {
                         .frame(width: UIConstants.searchButtonWidth, height: UIConstants.searchButtonHeight)
                         .font(.boldSmall)
                         .background(.ypBlue)
-                        .foregroundColor(.ypWhite)
+                        .foregroundColor(.ypWhiteUniversal)
                         .cornerRadius(UIConstants.cornerRadiusSmall)
                         .padding()
                     }
@@ -69,7 +79,7 @@ struct MainContentView: View {
                 }
                 
                 ZStack {
-                    Text("2")
+                    SettingsView(isDarkMode: $isDarkMode, path: $path)
                 }
                 .tabItem {
                     Label("", image: "tabSettings")
@@ -85,16 +95,36 @@ struct MainContentView: View {
                 } else if id == "ChoosingStationViewFrom" {
                     ChoosingStationView(path: $path, selectedStation: $fromCity)
                 }  else if id == "TrainScheduleView" {
-                    TrainScheduleView(path: $path)
+                    TrainScheduleView(path: $path, filterOptions: $filterOptions, carrier: $carrier)
+                } else if id == "FilterScheduleView" {
+                    FilterScheduleView(path: $path, filterOptions: $filterOptions)
+                } else if id == "CarrierView" {
+                    CarrierView(path: $path, carrier: $carrier)
+                } else if id == "UserAgreementView" {
+                    UserAgreementView()
+                        .navigationTitle("Пользовательское соглашение")
+                        .navigationBarBackButtonHidden(true)
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button(action: {
+                                    path.removeLast()
+                                    filterOptions = FilterSettings(morningSelected: false, afternoonSelected: false, eveningSelected: false, nightSelected: false, showTransfers: nil)
+                                }) {
+                                    Image(systemName: "chevron.backward")
+                                        .foregroundColor(.ypBlack)
+                                }
+                            }
+                        }
+                        .tint(.black)
                 }
             }
-            .tint(.black)
+            .tint(.ypBlack)
         }
     }
 }
 
 #Preview {
-    MainContentView()
+    MainContentView(isDarkMode: .constant(false))
 }
 
 enum Direction {

@@ -11,7 +11,7 @@ struct CustomSearchBar: View {
             TextField("Введите запрос", text: $text, onEditingChanged: { isStarted in
                 self.isEditing = isStarted
             })
-            .foregroundColor(.ypBlackUniversal)
+            .foregroundColor(.ypBlack)
             .tint(.ypBlue)
             .background(.ypLightGray)
             .font(.regularMedium)

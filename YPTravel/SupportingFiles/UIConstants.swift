@@ -9,6 +9,7 @@ enum UIConstants {
     static let paddingLarge: CGFloat = 24
     
     static let padding: CGFloat = 16
+    static let mediumPadding: CGFloat = 12
     
     static let paddingRow: CGFloat = 19
     
@@ -38,5 +39,7 @@ enum UIConstants {
     
     enum CheckBox {
         static let checkBoxSide: CGFloat = 24
+        static let checkBoxCircle: CGFloat = 10
+        static let borderWidth: CGFloat = 2
     }
 }

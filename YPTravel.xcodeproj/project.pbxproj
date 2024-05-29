@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		402C0FE02BD3B2EC00336D15 /* CustomListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402C0FDF2BD3B2EC00336D15 /* CustomListRow.swift */; };
+		405AD85A2C071EF000FCE203 /* CarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AD8592C071EF000FCE203 /* CarrierView.swift */; };
+		405AD8642C073A8600FCE203 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AD8632C073A8600FCE203 /* SettingsView.swift */; };
+		405AD8662C07632D00FCE203 /* UserAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AD8652C07632D00FCE203 /* UserAgreementView.swift */; };
 		405F17192BD4E8BE009F301C /* ChoosingStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405F17182BD4E8BE009F301C /* ChoosingStationView.swift */; };
 		405F171C2BD4E940009F301C /* ChoosingStatonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405F171B2BD4E940009F301C /* ChoosingStatonViewModel.swift */; };
 		40693DF42BD271A7006DD512 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40693DF32BD271A7006DD512 /* CustomSearchBar.swift */; };
@@ -29,17 +32,23 @@
 		409FDE042BA2ECF3007BD877 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409FDE032BA2ECF3007BD877 /* MainContentView.swift */; };
 		409FDE062BA2ECF5007BD877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409FDE052BA2ECF5007BD877 /* Assets.xcassets */; };
 		409FDE092BA2ECF5007BD877 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409FDE082BA2ECF5007BD877 /* Preview Assets.xcassets */; };
+		40B219BB2C046D9E009B6229 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B219BA2C046D9E009B6229 /* CustomButton.swift */; };
+		40B219BE2C04982C009B6229 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B219BD2C04982C009B6229 /* FilterOption.swift */; };
 		40B23D6C2BC038670094D545 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B23D6B2BC038670094D545 /* Images.xcassets */; };
 		40B23D6F2BC039160094D545 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B23D6E2BC039160094D545 /* Colors.xcassets */; };
 		40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7D2BC03E540094D545 /* MainViewModel.swift */; };
 		40B23D802BC03E730094D545 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7F2BC03E730094D545 /* MainModel.swift */; };
 		40B23D822BC044D00094D545 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D812BC044D00094D545 /* Fonts.swift */; };
+		40D6DD572C033D3E00727F5D /* CheckBoxConnectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6DD562C033D3E00727F5D /* CheckBoxConnectionRow.swift */; };
 		40E866502BDE242F00B5A0ED /* FilterScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E8664F2BDE242F00B5A0ED /* FilterScheduleView.swift */; };
 		40E866522BDE267400B5A0ED /* CheckBoxRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E866512BDE267400B5A0ED /* CheckBoxRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		402C0FDF2BD3B2EC00336D15 /* CustomListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListRow.swift; sourceTree = "<group>"; };
+		405AD8592C071EF000FCE203 /* CarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierView.swift; sourceTree = "<group>"; };
+		405AD8632C073A8600FCE203 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		405AD8652C07632D00FCE203 /* UserAgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementView.swift; sourceTree = "<group>"; };
 		405F17182BD4E8BE009F301C /* ChoosingStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingStationView.swift; sourceTree = "<group>"; };
 		405F171B2BD4E940009F301C /* ChoosingStatonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingStatonViewModel.swift; sourceTree = "<group>"; };
 		40693DF32BD271A7006DD512 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
@@ -60,11 +69,14 @@
 		409FDE032BA2ECF3007BD877 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		409FDE052BA2ECF5007BD877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		409FDE082BA2ECF5007BD877 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		40B219BA2C046D9E009B6229 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		40B219BD2C04982C009B6229 /* FilterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOption.swift; sourceTree = "<group>"; };
 		40B23D6B2BC038670094D545 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		40B23D6E2BC039160094D545 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		40B23D7D2BC03E540094D545 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		40B23D7F2BC03E730094D545 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		40B23D812BC044D00094D545 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		40D6DD562C033D3E00727F5D /* CheckBoxConnectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxConnectionRow.swift; sourceTree = "<group>"; };
 		40E8664F2BDE242F00B5A0ED /* FilterScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScheduleView.swift; sourceTree = "<group>"; };
 		40E866512BDE267400B5A0ED /* CheckBoxRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxRow.swift; sourceTree = "<group>"; };
 		40F3A5622BC7FE6F004EB53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +95,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		405AD85D2C07386400FCE203 /* CarrierView */ = {
+			isa = PBXGroup;
+			children = (
+				405AD8592C071EF000FCE203 /* CarrierView.swift */,
+			);
+			path = CarrierView;
+			sourceTree = "<group>";
+		};
+		405AD8622C073A3600FCE203 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				405AD8632C073A8600FCE203 /* SettingsView.swift */,
+				405AD8652C07632D00FCE203 /* UserAgreementView.swift */,
+			);
+			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
 		405F17102BD4E867009F301C /* ChoosingStation */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +212,7 @@
 			children = (
 				40693DF32BD271A7006DD512 /* CustomSearchBar.swift */,
 				402C0FDF2BD3B2EC00336D15 /* CustomListRow.swift */,
+				40B219BA2C046D9E009B6229 /* CustomButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -251,9 +281,11 @@
 			isa = PBXGroup;
 			children = (
 				40B23D742BC03D7B0094D545 /* MainScreen */,
+				405AD8622C073A3600FCE203 /* SettingsScreen */,
 				409B13312BCD309100A2AA5A /* ChoosingCity */,
 				405F17102BD4E867009F301C /* ChoosingStation */,
 				407ED3DD2BD54F0A000F3B42 /* TrainSchedule */,
+				405AD85D2C07386400FCE203 /* CarrierView */,
 				40E8664D2BDE23F400B5A0ED /* FilterSchedule */,
 			);
 			path = Screens;
@@ -281,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				40B23D7F2BC03E730094D545 /* MainModel.swift */,
+				40B219BD2C04982C009B6229 /* FilterOption.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,6 +331,7 @@
 			children = (
 				40E8664F2BDE242F00B5A0ED /* FilterScheduleView.swift */,
 				40E866512BDE267400B5A0ED /* CheckBoxRow.swift */,
+				40D6DD562C033D3E00727F5D /* CheckBoxConnectionRow.swift */,
 			);
 			path = FilterSchedule;
 			sourceTree = "<group>";
@@ -398,15 +432,21 @@
 				409EB2E62BA588BE00A0D288 /* NetworkClient.swift in Sources */,
 				408CF1842BDA9F6C00EA2F59 /* TrainScheduleViewModel.swift in Sources */,
 				409B133A2BCD51C100A2AA5A /* ChoosingCityViewModel.swift in Sources */,
+				40B219BE2C04982C009B6229 /* FilterOption.swift in Sources */,
 				407ED3E22BD552DB000F3B42 /* TrainScheduleView.swift in Sources */,
 				40B23D802BC03E730094D545 /* MainModel.swift in Sources */,
 				409EB2E92BA588CC00A0D288 /* NetworkClientProtocol.swift in Sources */,
+				405AD85A2C071EF000FCE203 /* CarrierView.swift in Sources */,
 				405F171C2BD4E940009F301C /* ChoosingStatonViewModel.swift in Sources */,
 				409EB2F92BA5927600A0D288 /* UIConstants.swift in Sources */,
+				40B219BB2C046D9E009B6229 /* CustomButton.swift in Sources */,
 				40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */,
+				40D6DD572C033D3E00727F5D /* CheckBoxConnectionRow.swift in Sources */,
 				40E866502BDE242F00B5A0ED /* FilterScheduleView.swift in Sources */,
 				409B13382BCD30F800A2AA5A /* ChoosingCityView.swift in Sources */,
 				405F17192BD4E8BE009F301C /* ChoosingStationView.swift in Sources */,
+				405AD8662C07632D00FCE203 /* UserAgreementView.swift in Sources */,
+				405AD8642C073A8600FCE203 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,7 +587,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YPTravel/Preview Content\"";
-				DEVELOPMENT_TEAM = B76F947LP3;
+				DEVELOPMENT_TEAM = V6V6RWV729;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPTravel/Info.plist;
@@ -576,7 +616,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YPTravel/Preview Content\"";
-				DEVELOPMENT_TEAM = B76F947LP3;
+				DEVELOPMENT_TEAM = V6V6RWV729;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPTravel/Info.plist;

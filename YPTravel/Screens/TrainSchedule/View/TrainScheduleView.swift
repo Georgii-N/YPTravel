@@ -5,19 +5,28 @@ struct TrainScheduleView: View {
     @StateObject private var viewModel = TrainScheduleViewModel()
     
     @Binding var path: [String]
+    @Binding var filterOptions: FilterSettings
+    @Binding var carrier: String?
     
     var body: some View {
         ZStack {
             VStack() {
                 Text("Москва (Ярославский вокзал) → Санкт Петербург (Балтийский вокзал) ")
-                    .foregroundStyle(.ypBlackUniversal)
+                    .foregroundStyle(.ypBlack)
                     .font(.boldMedium)
                 
-                LazyVStack(spacing: UIConstants.smallPadding) {
-                    ForEach(viewModel.routes, id: \.id) { route in
-                        TrainScheduleRow(route: route)
+                ScrollView {
+                    LazyVStack(spacing: UIConstants.smallPadding) {
+                        
+                        ForEach(viewModel.filteredRoutes, id: \.id) { route in
+                            TrainScheduleRow(route: route)
+                                .onTapGesture {
+                                    path.append("CarrierView")
+                                }
+                        }
                     }
                 }
+                Spacer()
             }
             .padding()
             
@@ -25,12 +34,18 @@ struct TrainScheduleView: View {
                 Spacer()
                 Button("Уточнить время") {
                     
+                    if path.contains("FilterScheduleView") {
+                        path.removeLast()
+                    } else {
+                        path.append("FilterScheduleView")
+                    }
+                    
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: UIConstants.searchButtonHeight)
                 .font(.boldSmall)
                 .background(.ypBlue)
-                .foregroundColor(.ypWhite)
+                .foregroundColor(.ypWhiteUniversal)
                 .cornerRadius(UIConstants.cornerRadiusSmall)
                 .padding(.horizontal)
                 .padding(.bottom, UIConstants.paddingLarge)
@@ -43,14 +58,17 @@ struct TrainScheduleView: View {
                     path.removeLast()
                 }) {
                     Image(systemName: "chevron.backward")
-                        .foregroundColor(.black)
+                        .foregroundColor(.ypBlack)
                 }
             }
         }
         .tint(.black)
+        .onAppear {
+            viewModel.applyFilters(filterOptions)
+        }
     }
 }
 
 #Preview {
-    TrainScheduleView(path: .constant([]))
+    TrainScheduleView(path: .constant([]), filterOptions: .constant(FilterSettings(morningSelected: false, afternoonSelected: false, eveningSelected: false, nightSelected: false, showTransfers: nil)), carrier: .constant(nil))
 }

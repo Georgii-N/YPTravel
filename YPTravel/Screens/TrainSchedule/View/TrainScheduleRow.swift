@@ -21,10 +21,12 @@ struct TrainScheduleRow: View {
                             .frame(maxWidth: .infinity, alignment: .trailing)
                         
                     }
-                    Text(route.transferDetails ?? " ")
-                        .font(.regularSmall)
-                        .foregroundStyle(.ypRed)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    if let transferDetails = route.transferDetails {
+                        Text(transferDetails)
+                            .font(.regularSmall)
+                            .foregroundStyle(.ypRed)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
                 }
             }
             .padding(.top, UIConstants.TrainScheduleRow.mediumInset)
@@ -52,11 +54,11 @@ struct TrainScheduleRow: View {
             .padding(.all, UIConstants.TrainScheduleRow.mediumInset)
         }
         .padding(.horizontal)
-        .background(.ypLightGray)
+        .background(.ypLightGrayUniversal)
         .cornerRadius(UIConstants.TrainScheduleRow.cornerRadius)
     }
 }
 
 #Preview {
-    TrainScheduleRow(route: RouteModel(company: "ФГК", date: "14 января", transferDetails: "С пересадкой в Костроме", departureTime: "22:30", tripDuration: "20 часов", arrivalTime: "08:15"))
+    TrainScheduleRow(route: RouteModel(company: "ФГК", date: "14 января", transferDetails: nil, departureTime: "22:30", tripDuration: "20 часов", arrivalTime: "08:15"))
 }
