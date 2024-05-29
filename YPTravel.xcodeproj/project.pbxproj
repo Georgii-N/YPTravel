@@ -11,6 +11,7 @@
 		405AD85A2C071EF000FCE203 /* CarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AD8592C071EF000FCE203 /* CarrierView.swift */; };
 		405AD8642C073A8600FCE203 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AD8632C073A8600FCE203 /* SettingsView.swift */; };
 		405AD8662C07632D00FCE203 /* UserAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AD8652C07632D00FCE203 /* UserAgreementView.swift */; };
+		405AD86B2C076E2F00FCE203 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AD86A2C076E2F00FCE203 /* ErrorView.swift */; };
 		405F17192BD4E8BE009F301C /* ChoosingStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405F17182BD4E8BE009F301C /* ChoosingStationView.swift */; };
 		405F171C2BD4E940009F301C /* ChoosingStatonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405F171B2BD4E940009F301C /* ChoosingStatonViewModel.swift */; };
 		40693DF42BD271A7006DD512 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40693DF32BD271A7006DD512 /* CustomSearchBar.swift */; };
@@ -49,6 +50,7 @@
 		405AD8592C071EF000FCE203 /* CarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierView.swift; sourceTree = "<group>"; };
 		405AD8632C073A8600FCE203 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		405AD8652C07632D00FCE203 /* UserAgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementView.swift; sourceTree = "<group>"; };
+		405AD86A2C076E2F00FCE203 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		405F17182BD4E8BE009F301C /* ChoosingStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingStationView.swift; sourceTree = "<group>"; };
 		405F171B2BD4E940009F301C /* ChoosingStatonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingStatonViewModel.swift; sourceTree = "<group>"; };
 		40693DF32BD271A7006DD512 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 				405AD8652C07632D00FCE203 /* UserAgreementView.swift */,
 			);
 			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		405AD8692C076DDF00FCE203 /* ErrorsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				405AD86A2C076E2F00FCE203 /* ErrorView.swift */,
+			);
+			path = ErrorsScreen;
 			sourceTree = "<group>";
 		};
 		405F17102BD4E867009F301C /* ChoosingStation */ = {
@@ -280,6 +290,7 @@
 		40B23D712BC03D730094D545 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				405AD8692C076DDF00FCE203 /* ErrorsScreen */,
 				40B23D742BC03D7B0094D545 /* MainScreen */,
 				405AD8622C073A3600FCE203 /* SettingsScreen */,
 				409B13312BCD309100A2AA5A /* ChoosingCity */,
@@ -433,6 +444,7 @@
 				408CF1842BDA9F6C00EA2F59 /* TrainScheduleViewModel.swift in Sources */,
 				409B133A2BCD51C100A2AA5A /* ChoosingCityViewModel.swift in Sources */,
 				40B219BE2C04982C009B6229 /* FilterOption.swift in Sources */,
+				405AD86B2C076E2F00FCE203 /* ErrorView.swift in Sources */,
 				407ED3E22BD552DB000F3B42 /* TrainScheduleView.swift in Sources */,
 				40B23D802BC03E730094D545 /* MainModel.swift in Sources */,
 				409EB2E92BA588CC00A0D288 /* NetworkClientProtocol.swift in Sources */,

@@ -42,4 +42,9 @@ enum UIConstants {
         static let checkBoxCircle: CGFloat = 10
         static let borderWidth: CGFloat = 2
     }
+    
+    enum ErrorView {
+        static let sideImage: CGFloat = 223
+        static let cornerRadius: CGFloat = 70
+    }
 }
