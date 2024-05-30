@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		402C0FE02BD3B2EC00336D15 /* CustomListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402C0FDF2BD3B2EC00336D15 /* CustomListRow.swift */; };
+		404107802C08D91400FF464B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4041077F2C08D91400FF464B /* Launch Screen.storyboard */; };
 		405AD85A2C071EF000FCE203 /* CarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AD8592C071EF000FCE203 /* CarrierView.swift */; };
 		405AD8642C073A8600FCE203 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AD8632C073A8600FCE203 /* SettingsView.swift */; };
 		405AD8662C07632D00FCE203 /* UserAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AD8652C07632D00FCE203 /* UserAgreementView.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		402C0FDF2BD3B2EC00336D15 /* CustomListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListRow.swift; sourceTree = "<group>"; };
+		4041077F2C08D91400FF464B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		405AD8592C071EF000FCE203 /* CarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierView.swift; sourceTree = "<group>"; };
 		405AD8632C073A8600FCE203 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		405AD8652C07632D00FCE203 /* UserAgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		409FDDF52BA2ECF3007BD877 = {
 			isa = PBXGroup;
 			children = (
+				4041077F2C08D91400FF464B /* Launch Screen.storyboard */,
 				409FDE002BA2ECF3007BD877 /* YPTravel */,
 				409FDDFF2BA2ECF3007BD877 /* Products */,
 			);
@@ -410,6 +413,7 @@
 				40B23D6F2BC039160094D545 /* Colors.xcassets in Resources */,
 				409FDE062BA2ECF5007BD877 /* Assets.xcassets in Resources */,
 				4085567D2BA3205000F1B959 /* openapi-generator-config.yaml in Resources */,
+				404107802C08D91400FF464B /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,8 +595,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPTravel/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -620,8 +626,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPTravel/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
