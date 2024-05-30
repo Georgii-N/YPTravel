@@ -10,23 +10,40 @@ struct TrainScheduleView: View {
     
     var body: some View {
         ZStack {
+            Color.ypWhite
+                .edgesIgnoringSafeArea(.all)
             VStack() {
                 Text("Москва (Ярославский вокзал) → Санкт Петербург (Балтийский вокзал) ")
                     .foregroundStyle(.ypBlack)
                     .font(.boldMedium)
                 
-                ScrollView {
-                    LazyVStack(spacing: UIConstants.smallPadding) {
-                        
-                        ForEach(viewModel.filteredRoutes, id: \.id) { route in
-                            TrainScheduleRow(route: route)
-                                .onTapGesture {
-                                    path.append("CarrierView")
-                                }
+                if viewModel.filteredRoutes.isEmpty {
+                    GeometryReader { geometry in
+                        VStack {
+                            Spacer()
+                            Text("Вариантов нет")
+                                .foregroundColor(.ypBlack)
+                                .font(.boldMedium)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                            Spacer()
                         }
+                        .frame(height: geometry.size.height - UIConstants.searchButtonHeight - UIConstants.paddingLarge)
                     }
+                } else {
+                    ScrollView {
+                        LazyVStack(spacing: UIConstants.smallPadding) {
+                            
+                            ForEach(viewModel.filteredRoutes, id: \.id) { route in
+                                TrainScheduleRow(route: route)
+                                    .onTapGesture {
+                                        path.append("CarrierView")
+                                    }
+                            }
+                        }
+                        .padding(.bottom, UIConstants.TrainScheduleRow.bottomRowPadding)
+                    }
+                    Spacer()
                 }
-                Spacer()
             }
             .padding()
             
@@ -39,7 +56,6 @@ struct TrainScheduleView: View {
                     } else {
                         path.append("FilterScheduleView")
                     }
-                    
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: UIConstants.searchButtonHeight)
@@ -62,7 +78,7 @@ struct TrainScheduleView: View {
                 }
             }
         }
-        .tint(.black)
+        .tint(.ypBlack)
         .onAppear {
             viewModel.applyFilters(filterOptions)
         }

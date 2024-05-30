@@ -1,6 +1,6 @@
 import Foundation
 
-class TrainScheduleViewModel: ObservableObject {
+final class TrainScheduleViewModel: ObservableObject {
     
     @Published var routes: [RouteModel] = [
         RouteModel(company: "ФГК", date: "14 января", transferDetails: "С пересадкой в Костроме", departureTime: "22:30", tripDuration: "20 часов", arrivalTime: "08:15"),

@@ -1,6 +1,6 @@
 import Foundation
 
-class ChoosingStationViewModel: ObservableObject {
+final class ChoosingStationViewModel: ObservableObject {
     @Published var searchText = ""
     private var stations: [String] = ["Курский вокзал", "Ленинградский вокзал", "Казанский вокзал", "Минский вокзал", "Павелецкий вокзал"]
     

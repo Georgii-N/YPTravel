@@ -20,58 +20,63 @@ struct MainContentView: View {
     var body: some View {
         NavigationStack(path: $path) {
             TabView {
-                VStack {
-                    HStack(spacing: .zero) {
-                        VStack(spacing: .zero) {
-                            Text(fromCity ?? "Откуда")
-                                .padding()
-                                .foregroundColor(fromCity == nil ? .ypGray : .ypBlackUniversal)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(.ypWhiteUniversal)
-                                .font(.regularMedium)
-                                .onTapGesture {
-                                    path.append("ChoosingCityViewFrom")
-                                }
-                            
-                            Text(toCity ?? "Куда")
-                                .padding()
-                                .foregroundColor(toCity == nil ? .ypGray : .ypBlackUniversal)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(.ypWhiteUniversal)
-                                .font(.regularMedium)
-                                .onTapGesture {
-                                    path.append("ChoosingCityViewTo")
-                                }
-                               
-                        }
-                        .cornerRadius(UIConstants.cornerRadiusMedium)
-                        .padding()
-                        
-                        Button(action: {
-                            swap(&fromCity, &toCity)
-                        }) {
-                            Image(.textFieldChange)
-                        }
-                        .frame(width: UIConstants.swapButtonSide, height: UIConstants.swapButtonSide)
-                        .background(.ypWhiteUniversal)
-                        .cornerRadius(UIConstants.cornerRadiusLarge)
-                        .padding(.trailing, UIConstants.padding)
-                    }
-                    .background(.ypBlue)
-                    .cornerRadius(UIConstants.cornerRadiusMedium)
-                    .padding(.horizontal)
+                ZStack {
+                    Color.ypWhite
+                        .ignoresSafeArea(.all)
                     
-                   
-                    if toCity != nil && fromCity != nil {
-                        Button("Найти") {
-                            path.append("TrainScheduleView")
+                    VStack {
+                        HStack(spacing: .zero) {
+                            VStack(spacing: .zero) {
+                                Text(fromCity ?? "Откуда")
+                                    .padding()
+                                    .foregroundColor(fromCity == nil ? .ypGray : .ypBlackUniversal)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .background(.ypWhiteUniversal)
+                                    .font(.regularMedium)
+                                    .onTapGesture {
+                                        path.append("ChoosingCityViewFrom")
+                                    }
+                                
+                                Text(toCity ?? "Куда")
+                                    .padding()
+                                    .foregroundColor(toCity == nil ? .ypGray : .ypBlackUniversal)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .background(.ypWhiteUniversal)
+                                    .font(.regularMedium)
+                                    .onTapGesture {
+                                        path.append("ChoosingCityViewTo")
+                                    }
+                                   
+                            }
+                            .cornerRadius(UIConstants.cornerRadiusMedium)
+                            .padding()
+                            
+                            Button(action: {
+                                swap(&fromCity, &toCity)
+                            }) {
+                                Image(.textFieldChange)
+                            }
+                            .frame(width: UIConstants.swapButtonSide, height: UIConstants.swapButtonSide)
+                            .background(.ypWhiteUniversal)
+                            .cornerRadius(UIConstants.cornerRadiusLarge)
+                            .padding(.trailing, UIConstants.padding)
                         }
-                        .frame(width: UIConstants.searchButtonWidth, height: UIConstants.searchButtonHeight)
-                        .font(.boldSmall)
                         .background(.ypBlue)
-                        .foregroundColor(.ypWhiteUniversal)
-                        .cornerRadius(UIConstants.cornerRadiusSmall)
-                        .padding()
+                        .cornerRadius(UIConstants.cornerRadiusMedium)
+                        .padding(.horizontal)
+                        
+                       
+                        if toCity != nil && fromCity != nil {
+                            Button("Найти") {
+                                path.append("TrainScheduleView")
+                            }
+                            .frame(width: UIConstants.searchButtonWidth, height: UIConstants.searchButtonHeight)
+                            .font(.boldSmall)
+                            .background(.ypBlue)
+                            .foregroundColor(.ypWhiteUniversal)
+                            .cornerRadius(UIConstants.cornerRadiusSmall)
+                            .padding()
+                        }
                     }
                 }
                 .tabItem {
@@ -79,6 +84,8 @@ struct MainContentView: View {
                 }
                 
                 ZStack {
+                    Color.ypWhite
+                        .ignoresSafeArea(.all)
                     SettingsView(isDarkMode: $isDarkMode, path: $path)
                 }
                 .tabItem {

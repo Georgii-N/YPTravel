@@ -35,6 +35,9 @@ enum UIConstants {
         
         static let smallInset: CGFloat = 4
         static let mediumInset: CGFloat = 14
+        
+        static let bottomRowPadding: CGFloat = 19
+        
     }
     
     enum CheckBox {

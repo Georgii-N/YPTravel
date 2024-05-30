@@ -7,6 +7,8 @@ struct FilterScheduleView: View {
     
     var body: some View {
         ZStack {
+            Color.ypWhite
+                .edgesIgnoringSafeArea(.all)
             VStack {
                 VStack {
                     Text("Время отправления")
@@ -35,7 +37,7 @@ struct FilterScheduleView: View {
                             path.append("TrainScheduleView")
                         }
                     }
-
+                    
                     .frame(maxWidth: .infinity)
                     .frame(height: UIConstants.searchButtonHeight)
                     .font(.boldSmall)
@@ -59,7 +61,7 @@ struct FilterScheduleView: View {
                 }
             }
         }
-        .tint(.black)
+        .tint(.ypBlack)
     }
 }
 

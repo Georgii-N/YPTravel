@@ -3,7 +3,7 @@ import SwiftUI
 struct CheckboxRow: View {
     let title: String
     @Binding var isSelected: Bool
-
+    
     var body: some View {
         Button(action: {
             self.isSelected.toggle()

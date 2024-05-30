@@ -16,8 +16,6 @@ struct CustomListRow: View {
         Spacer()
         Image(.arrow)
     }
-    
-    
     .listRowSeparator(.hidden)
     }
 }

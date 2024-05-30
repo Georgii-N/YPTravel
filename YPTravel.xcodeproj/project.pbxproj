@@ -37,7 +37,6 @@
 		40B219BE2C04982C009B6229 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B219BD2C04982C009B6229 /* FilterOption.swift */; };
 		40B23D6C2BC038670094D545 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B23D6B2BC038670094D545 /* Images.xcassets */; };
 		40B23D6F2BC039160094D545 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B23D6E2BC039160094D545 /* Colors.xcassets */; };
-		40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7D2BC03E540094D545 /* MainViewModel.swift */; };
 		40B23D802BC03E730094D545 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D7F2BC03E730094D545 /* MainModel.swift */; };
 		40B23D822BC044D00094D545 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B23D812BC044D00094D545 /* Fonts.swift */; };
 		40D6DD572C033D3E00727F5D /* CheckBoxConnectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6DD562C033D3E00727F5D /* CheckBoxConnectionRow.swift */; };
@@ -75,7 +74,6 @@
 		40B219BD2C04982C009B6229 /* FilterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOption.swift; sourceTree = "<group>"; };
 		40B23D6B2BC038670094D545 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		40B23D6E2BC039160094D545 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		40B23D7D2BC03E540094D545 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		40B23D7F2BC03E730094D545 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		40B23D812BC044D00094D545 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		40D6DD562C033D3E00727F5D /* CheckBoxConnectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxConnectionRow.swift; sourceTree = "<group>"; };
@@ -306,7 +304,6 @@
 			isa = PBXGroup;
 			children = (
 				40B23D782BC03DFA0094D545 /* View */,
-				40B23D7C2BC03E140094D545 /* ViewModel */,
 				40B23D7B2BC03E030094D545 /* Model */,
 			);
 			path = MainScreen;
@@ -327,14 +324,6 @@
 				40B219BD2C04982C009B6229 /* FilterOption.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		40B23D7C2BC03E140094D545 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				40B23D7D2BC03E540094D545 /* MainViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		40E8664D2BDE23F400B5A0ED /* FilterSchedule */ = {
@@ -452,7 +441,6 @@
 				405F171C2BD4E940009F301C /* ChoosingStatonViewModel.swift in Sources */,
 				409EB2F92BA5927600A0D288 /* UIConstants.swift in Sources */,
 				40B219BB2C046D9E009B6229 /* CustomButton.swift in Sources */,
-				40B23D7E2BC03E540094D545 /* MainViewModel.swift in Sources */,
 				40D6DD572C033D3E00727F5D /* CheckBoxConnectionRow.swift in Sources */,
 				40E866502BDE242F00B5A0ED /* FilterScheduleView.swift in Sources */,
 				409B13382BCD30F800A2AA5A /* ChoosingCityView.swift in Sources */,

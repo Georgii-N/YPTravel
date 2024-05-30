@@ -1,6 +1,6 @@
 import Foundation
 
-class ChoosingCityViewModel: ObservableObject {
+final class ChoosingCityViewModel: ObservableObject {
     @Published var searchText = ""
     private var cities: [String] = ["Москва", "Санкт-Петербург", "Сочи", "Горный воздух", "Краснодар", "Казань", "Омск"]
     
