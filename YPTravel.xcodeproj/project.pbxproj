@@ -243,7 +243,6 @@
 		409FDDF52BA2ECF3007BD877 = {
 			isa = PBXGroup;
 			children = (
-				4041077F2C08D91400FF464B /* Launch Screen.storyboard */,
 				409FDE002BA2ECF3007BD877 /* YPTravel */,
 				409FDDFF2BA2ECF3007BD877 /* Products */,
 			);
@@ -260,6 +259,7 @@
 		409FDE002BA2ECF3007BD877 /* YPTravel */ = {
 			isa = PBXGroup;
 			children = (
+				4041077F2C08D91400FF464B /* Launch Screen.storyboard */,
 				40F3A5622BC7FE6F004EB53E /* Info.plist */,
 				409FDE012BA2ECF3007BD877 /* YPTravelApp.swift */,
 				40B23D712BC03D730094D545 /* Screens */,

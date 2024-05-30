@@ -13,7 +13,7 @@ struct CustomSearchBar: View {
             })
             .foregroundColor(.ypBlack)
             .tint(.ypBlue)
-            .background(.ypLightGray)
+            .background(.clear)
             .font(.regularMedium)
             .autocapitalization(.none)
             .disableAutocorrection(true)
